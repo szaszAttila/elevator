@@ -4,6 +4,12 @@ let dest2 = 6;
 let top1 = 122;
 let top2 = 758;
 
+fetch('/command/reset', {
+    method: 'post',
+})
+    .then(_ => {})
+    .catch(error => console.log(error));
+
 function call_elevator(direction, storey) {
     console.log("call ", direction, " from: ", storey);
     document.getElementById(`${direction}_button_${storey}`).style.color = 'red';

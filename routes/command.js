@@ -13,6 +13,14 @@ function send_command(res, command) {
   res.status(200).json(command);
 }
 
+app.post('/reset', (req, res, next) => {
+  calls = [];
+  elevator1 = 6;
+  elevator2 = 0;
+  destinations_1 = [];
+  destinations_2 = [];
+});
+
 app.get('/1', (req, res, next) => {
   if (destinations_1.length > 0) {
     if (elevator1 == destinations_1[0].storey) {
