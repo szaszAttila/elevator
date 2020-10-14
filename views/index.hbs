@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <h1>Elevator</h1>
+
+    <div id="elevator_1" class="elevator_1">
+        A
+        <div id="elevator_1_left" class="elevator_1_left"></div>
+        <div id="elevator_1_right" class="elevator_1_right"></div>
+    </div>
+    <div id="elevator_2" class="elevator_2">
+        B
+        <div id="elevator_2_left" class="elevator_2_left"></div>
+        <div id="elevator_2_right" class="elevator_2_right"></div>
+    </div>
+
+    <div class="control_buttons">
+        <div class="elevator_control_1">
+            {{#each storeys_reverse}}
+            <button id="destination_button_1_{{ind}}" onclick="elevator_goto(1, {{ind}})">{{ind}}</button>
+            {{/each}}
+        </div>
+        <div class="elevator_control_2">
+            {{#each storeys_reverse}}
+            <button id="destination_button_2_{{ind}}" onclick="elevator_goto(2, {{ind}})">{{ind}}</button>
+            {{/each}}
+        </div>
+    </div>
+
+    {{#each storeys}}
+    <hr />
+    <div class="storey_num">
+        <h2>{{ind}}</h2>
+        <div class="arrows1">
+            <span id="arrow_up_1_{{ind}}" class="arrow_up">&#8593;</span>
+            <span id="arrow_down_1_{{ind}}" class="arrow_down">&#8595;</span>
+        </div>
+        <div class="buttons">
+            <button id="up_button_{{ind}}" class="up_button" onclick="call_elevator('up', {{ind}})">&#8593;</button>
+            <button id="down_button_{{ind}}" class="down_button" onclick="call_elevator('down', {{ind}})">&#8595;</button>
+        </div>
+        <div class="arrows2">
+            <span id="arrow_up_2_{{ind}}" class="arrow_up">&#8593;</span>
+            <span id="arrow_down_2_{{ind}}" class="arrow_down">&#8595;</span>
+        </div>
+    </div>
+    {{/each}}
+    <hr />
+
+    <script src="javascripts/call_elevator.js"></script>
+</body>
+
+</html>

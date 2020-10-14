@@ -1,0 +1,170 @@
+body {
+  padding-left: 50px;
+  padding-right: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  position: relative;
+  left: 50%;
+  width: 100px;
+}
+
+hr {
+  padding-bottom: 10px;
+  background-color: gray;
+  margin-top: 10px;
+}
+
+.storey_num {}
+
+.arrow_up {
+  font-size: 20px;
+  color: #777777;
+  margin: 10px;
+  height: 70px;
+}
+
+.arrow_down {
+  font-size: 20px;
+  color: #777777;
+  /* color: yellow; */
+}
+
+.buttons {
+  display: inline;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.arrows1{
+  display: inline;
+  position: relative;
+  left: 700px;
+}
+
+.arrows2{
+  display: inline;
+  position: relative;
+  left: 940px;
+}
+
+.control_buttons {
+  width: 100%;
+}
+
+.elevator_control_1 {
+  display: inline;
+  position: relative;
+}
+
+.elevator_control_2 {
+  display: inline;
+  position: absolute;
+  right: 60px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~animations~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.elevator_1 {
+  width: 70px;
+  height: 95px;
+  text-align: center;
+  color: green;
+  background-color: #c0c0c0;
+  position: absolute;
+  left: 600px;
+  top: 122px;
+  /* animation-name: example; */
+  /* animation-duration: 5s; */
+  transition:2s;
+  -webkit-transition:2s;
+  -moz-transition:2s;
+}
+
+/* @keyframes example {
+  0%  {top: 122px;}
+  20%    {top: 440px;}
+  40%    {top: 758px;}
+  60%    {top: 334px;}
+  100%  {top: 122px;}
+} */
+
+.elevator_2 {
+  width: 70px;
+  height: 95px;
+  text-align: center;
+  color: green;
+  background-color: #c0c0c0;
+  position: absolute;
+  left: 1200px;
+  top: 758px;
+  transition:2s;
+  -webkit-transition:2s;
+  -moz-transition:2s;
+}
+
+.elevator_1_left, .elevator_2_left {
+  position: absolute;
+  width: 35px;
+  height: 78px;
+  background-color: #444444;
+  left: 0px;
+  top: 17px;
+  transition:2s;
+  -webkit-transition:2s;
+  -moz-transition:2s;
+}
+
+.elevator_1_right, .elevator_2_right {
+  position: absolute;
+  width: 35px;
+  height: 78px;
+  background-color: #444444;
+  left: 35px;
+  top: 17px;
+  transition:2s;
+  -webkit-transition:2s;
+  -moz-transition:2s;
+}
+
+.left_door_animation {
+  animation-name: left_door;
+  animation-duration: 2s;
+}
+
+.right_door_animation {
+  animation-name: right_door;
+  animation-duration: 2s;
+}
+
+@keyframes left_door {
+  from {width: 35px;}
+  50% {width: 0px;}
+  to {width: 35px;}
+}
+
+@keyframes right_door {
+  from {
+    width: 35px;
+    left: 35px;
+  }
+  50% {
+    width: 0px;
+    left: 70px;
+  }
+  to {
+    width: 35px;
+    left: 35px;
+  }
+}
+
+/* 106 = 1 step */
